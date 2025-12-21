@@ -1,0 +1,22 @@
+/* Personnalisation Timeline */
+.timeline-container {
+    border-left: 4px solid #0d6efd;
+    padding-left: 20px;
+    margin-left: 50px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+}
