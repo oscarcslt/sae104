@@ -3,34 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Oscar Casalta</title>
+    <title>Accueil - Portfolio Oscar Casalta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+<body class="bg-light">
+
+    <header class="py-3 border-bottom bg-white shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="./img/logo.png" alt="Logo" width="40" class="me-2">
+                <span class="fs-4 fw-bold text-dark">Portfolio Oscar Casalta</span>
+            </div>
+            <span class="text-muted d-none d-md-block">Bienvenue sur mon espace professionnel</span>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="accueil.html">Oscar Casalta</a>
-            <div class="navbar-nav">
-                <a class="nav-link active" href="accueil.html">Accueil</a>
-                <a class="nav-link" href="cv.html">CV</a>
-                <a class="nav-link" href="blason.html">Blason</a>
-                <a class="nav-link" href="projet.html">Projet Pro</a>
-                <a class="nav-link" href="carousel.html">Carousel</a>
-                <a class="nav-link" href="cards.html">Cards</a>
-                <a class="nav-link" href="timeline.html">Timeline</a>
-                <a class="nav-link" href="ressources.html">Ressources</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="accueil.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">Mon CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blason.html">Blason</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projet.html">Projet Pro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carousel.html">Photos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cards.html">Relations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="timeline.html">Parcours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ressources.html">Ressources</a></li>
+                </ul>
             </div>
         </div>
     </nav>
-    <main class="container text-center py-5">
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <p class="lead">Oscar Casalta - Étudiant en BUT Réseaux & Télécoms</p>
-        <p>Groupe de TP : [Ton Groupe]</p>
-        <div class="mt-4">
-            <img src="./img/techno_hist.jpg" class="rounded shadow w-50" alt="Technologie">
+
+    <section class="bg-primary text-white py-5 shadow">
+        <div class="container text-center py-5">
+            <h1 class="display-3 fw-bold mb-3">CONCEVOIR ET SÉCURISER</h1>
+            <p class="lead fs-3 mb-4">Étudiant en Réseaux & Télécoms et Président d'AIPB44</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="cv.html" class="btn btn-light btn-lg px-4 fw-bold">Voir mon CV</a>
+                <a href="timeline.html" class="btn btn-outline-light btn-lg px-4">Mon Parcours</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7">
+                <h2 class="fw-bold border-bottom border-primary border-4 pb-2 mb-4">À propos de ce portfolio</h2>
+                <p class="fs-5 text-secondary">
+                    Bienvenue sur mon portfolio réalisé dans le cadre de la <strong>SAÉ 104</strong> à l'IUT de Saint-Malo. 
+                    Ce site a pour but de vous présenter mon profil d'étudiant en <em>Réseaux et Télécommunications</em>.
+                </p>
+                <p class="fs-5">
+                    Curieux et polyvalent, je conçois et déploie des solutions fiables et sécurisées, toujours adaptées aux besoins des utilisateurs, en alliant rigueur technique et sens du terrain.
+                </p>
+                <div class="mt-4 p-4 bg-white rounded shadow-sm border-start border-primary border-4">
+                    <h5 class="fw-bold">Objectif actuel :</h5>
+                    <p class="mb-0">Recherche d'un stage d'un mois (février - mars 2026) pour approfondir mes compétences en ingénierie réseaux et sécurité.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-lg overflow-hidden">
+                    <img src="./img/photo_oscar.jpg" class="card-img-top" alt="Oscar Casalta">
+                    <div class="card-body bg-dark text-white text-center">
+                        <p class="card-text small text-uppercase fw-bold">Oscar Casalta - RT1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-5 text-center g-4">
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100">
+                    <div class="h1 text-primary mb-3">🛠️</div>
+                    <h4 class="fw-bold">Compétences</h4>
+                    <p class="text-muted small">Fortinet, pfSense, Proxmox et administration réseau (AS216190).</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100">
+                    <div class="h1 text-primary mb-3">🏆</div>
+                    <h4 class="fw-bold">Distinctions</h4>
+                    <p class="text-muted small">Vainqueur du Flag'Malo 2K25 avec 12 554 points.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100">
+                    <div class="h1 text-primary mb-3">📡</div>
+                    <h4 class="fw-bold">Expériences</h4>
+                    <p class="text-muted small">Président d'AIPB44 et Responsable Technique chez BreizhPMS.</p>
+                </div>
+            </div>
         </div>
     </main>
-    <script src="./script.js"></script>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0 small text-uppercase">Oscar Casalta - R&T Saint-Malo - Saé 104 - 2025/2026</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
