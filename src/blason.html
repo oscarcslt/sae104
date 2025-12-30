@@ -2,22 +2,110 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mon Blason - SAÉ 104</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blason - Oscar Casalta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-    <div class="container py-5">
-        <h1 class="text-center mb-5">Mon Blason Personnel</h1>
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center border p-4 bg-white shadow" id="blasonContainer" onmouseover="highlightBlason()" onmouseout="resetBlason()">
-                <img src="./img/blason_com.png" alt="Mon Blason" class="img-fluid mb-4">
-                <div id="blasonDetails" class="mt-3">
-                    <h3>Mes Valeurs et Objectifs</h3>
-                    <p>Découvrez mes points forts et mes engagements à travers ce blason.</p>
-                </div>
-            </div>
+
+    <header class="py-3 border-bottom bg-white shadow-sm text-center">
+        <div class="container d-flex justify-content-center align-items-center">
+            <img src="./img/logo.png" alt="Logo" width="40" class="me-2">
+            <span class="fs-4 fw-bold">Mon Blason Interactif</span>
         </div>
-    </div>
-    <script src="./script.js"></script>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container justify-content-center">
+            <ul class="navbar-nav text-uppercase small">
+                <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">Mon CV</a></li>
+                <li class="nav-item"><a class="nav-link active fw-bold" href="blason.html">Blason</a></li>
+                <li class="nav-item"><a class="nav-link" href="projet.html">Projet Pro</a></li>
+                <li class="nav-item"><a class="nav-link" href="carousel.html">Photos</a></li>
+                <li class="nav-item"><a class="nav-link" href="cards.html">Relations</a></li>
+                <li class="nav-item"><a class="nav-link" href="timeline.html">Parcours</a></li>
+                <li class="nav-item"><a class="nav-link" href="ressources.html">Ressources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container py-5 text-center">
+        <div class="alert alert-primary fw-bold shadow-sm mb-4" id="bulle-info" style="min-height: 60px;">
+            Survolez un point pour voir la description
+        </div>
+
+        <div class="position-relative d-inline-block shadow rounded bg-white p-2 mb-5">
+            <img src="./img/blason.png" alt="Blason" class="img-fluid rounded" style="max-width: 500px;">
+            
+            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
+                    style="top: 15%; left: 28%; width: 32px; height: 32px;"
+                    title="Points Forts"
+                    onmouseover="majDesc('Points Forts : Rigueur technique et résilience (Le Phénix)')"
+                    onmouseout="resetDesc()">1</button>
+
+            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
+                    style="top: 15%; left: 70%; width: 32px; height: 32px;"
+                    title="Obstacles"
+                    onmouseover="majDesc('Obstacles : Limites matérielles et sécurité physique')"
+                    onmouseout="resetDesc()">2</button>
+
+            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
+                    style="top: 32%; left: 35%; width: 32px; height: 32px;"
+                    title="Valeurs"
+                    onmouseover="majDesc('Valeurs : Travail d\'équipe et entraide')"
+                    onmouseout="resetDesc()">3</button>
+
+            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
+                    style="top: 32%; left: 70%; width: 32px; height: 32px;"
+                    title="Références"
+                    onmouseover="majDesc('Références : L\'autonomie prônée par Étienne de La Boétie')"
+                    onmouseout="resetDesc()">4</button>
+
+            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
+                    style="top: 50%; left: 45%; width: 32px; height: 32px;"
+                    title="Événements"
+                    onmouseover="majDesc('Événements : Création d\'OCASDEV et infrastructures serveurs')"
+                    onmouseout="resetDesc()">5</button>
+
+            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
+                    style="top: 50%; left: 72%; width: 32px; height: 32px;"
+                    title="Amélioration"
+                    onmouseover="majDesc('Amélioration : Gestion du stress et protocoles complexes')"
+                    onmouseout="resetDesc()">6</button>
+        </div>
+
+        <div class="card shadow-sm border-0 p-4 mx-auto" style="max-width: 800px;">
+            <p class="mb-0 text-muted fst-italic">
+                "Soyez résolus à ne plus servir, et vous voilà libres."
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center small text-uppercase">
+            Oscar Casalta - R&T Saint-Malo - Saé 104
+        </div>
+    </footer>
+
+    <script>
+        function majDesc(texte) {
+            var bulle = document.getElementById('bulle-info');
+            if (bulle) {
+                bulle.innerText = texte;
+                bulle.classList.replace('alert-primary', 'alert-dark');
+            }
+        }
+
+        function resetDesc() {
+            var bulle = document.getElementById('bulle-info');
+            if (bulle) {
+                bulle.innerText = "Survolez un point pour voir la description";
+                bulle.classList.replace('alert-dark', 'alert-primary');
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

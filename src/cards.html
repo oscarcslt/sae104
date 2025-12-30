@@ -2,18 +2,190 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mes Références</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards - Oscar Casalta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="container py-5">
-    <div class="row g-4">
-        <div class="col-md-4"><div class="card"><img src="./img/fortinet.png" class="card-img-top"><div class="card-body">Fortinet NSE [cite: 29]</div></div></div>
-        <div class="col-md-4"><div class="card"><img src="./img/cisco.png" class="card-img-top"><div class="card-body">Cisco CCNA [cite: 33]</div></div></div>
-        <div class="col-md-4"><div class="card"><img src="./img/3cx.png" class="card-img-top"><div class="card-body">3CX Basic [cite: 31]</div></div></div>
-        <div class="col-md-4"><div class="card"><img src="./img/paloalto.png" class="card-img-top"><div class="card-body">PaloAlto [cite: 32]</div></div></div>
-        <div class="col-md-4"><div class="card"><img src="./img/proxmox.png" class="card-img-top"><div class="card-body">Proxmox [cite: 66]</div></div></div>
-        <div class="col-md-4"><div class="card"><img src="./img/breizh.png" class="card-img-top"><div class="card-body">BreizhPMS [cite: 70]</div></div></div>
-    </div>
-    <script src="./script.js"></script>
+<body class="bg-light">
+
+    <header class="py-3 border-bottom bg-white shadow-sm text-center">
+        <div class="container d-flex justify-content-center align-items-center">
+            <img src="./img/logo.png" alt="Logo" width="40" class="me-2">
+            <span class="fs-4 fw-bold">Réseau & Centres d'Intérêts</span>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container justify-content-center">
+            <ul class="navbar-nav mx-auto text-uppercase small">
+                <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">Mon CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="blason.html">Blason</a></li>
+                <li class="nav-item"><a class="nav-link" href="projet.html">Projet Pro</a></li>
+                <li class="nav-item"><a class="nav-link" href="carousel.html">Photos</a></li>
+                <li class="nav-item"><a class="nav-link active fw-bold" href="cards.html">Cards</a></li>
+                <li class="nav-item"><a class="nav-link" href="timeline.html">Parcours</a></li>
+                <li class="nav-item"><a class="nav-link" href="ressources.html">Ressources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-uppercase">Mes Inspirations & Relations</h1>
+            <p class="text-muted">Survolez une carte pour voir les détails</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-center">
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 bg-white" id="card-1" onmouseover="basculer('1', true)" onmouseout="basculer('1', false)">
+                    <div id="recto-1">
+                        <img src="./img/fortinet.png" class="card-img-top p-4" style="height: 160px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Fortinet</h5>
+                            <p class="small text-primary mb-0">Sécurité</p>
+                        </div>
+                    </div>
+                    <div id="verso-1" class="card-body d-none bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
+                        <h5 class="text-info">Fortinet</h5>
+                        <p class="small p-2">Certifications NSE 1, 2 et 3 obtenues. Leader mondial en cybersécurité.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 bg-white" id="card-2" onmouseover="basculer('2', true)" onmouseout="basculer('2', false)">
+                    <div id="recto-2">
+                        <img src="./img/proxmox.png" class="card-img-top p-4" style="height: 160px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Proxmox</h5>
+                            <p class="small text-primary mb-0">Hyperviseur</p>
+                        </div>
+                    </div>
+                    <div id="verso-2" class="card-body d-none bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
+                        <h5 class="text-info">Proxmox</h5>
+                        <p class="small p-2">Solution de virtualisation utilisée pour gérer mes serveurs Dell R410.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 bg-white" id="card-3" onmouseover="basculer('3', true)" onmouseout="basculer('3', false)">
+                    <div id="recto-3">
+                        <img src="./img/cisco.png" class="card-img-top p-4" style="height: 160px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Cisco</h5>
+                            <p class="small text-primary mb-0">Réseaux</p>
+                        </div>
+                    </div>
+                    <div id="verso-3" class="card-body d-none bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
+                        <h5 class="text-info">Cisco</h5>
+                        <p class="small p-2">Préparation active du CCNA pour valider mes compétences réseaux.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 bg-white" id="card-4" onmouseover="basculer('4', true)" onmouseout="basculer('4', false)">
+                    <div id="recto-4">
+                        <img src="./img/aipb44.png" class="card-img-top p-4" style="height: 160px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="fw-bold">AIPB44</h5>
+                            <p class="small text-success mb-0">Association</p>
+                        </div>
+                    </div>
+                    <div id="verso-4" class="card-body d-none bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
+                        <h5 class="text-info">AIPB44</h5>
+                        <p class="small p-2">Président de l'association OCASDEV proposant des services IT depuis 2021.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 bg-white" id="card-5" onmouseover="basculer('5', true)" onmouseout="basculer('5', false)">
+                    <div id="recto-5">
+                        <img src="./img/breizhpms.png" class="card-img-top p-4" style="height: 160px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="fw-bold">BreizhPMS</h5>
+                            <p class="small text-success mb-0">Événementiel</p>
+                        </div>
+                    </div>
+                    <div id="verso-5" class="card-body d-none bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
+                        <h5 class="text-info">BreizhPMS</h5>
+                        <p class="small p-2">Responsable technique pour le festival (SI, WiFi, Cashless).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 bg-white" id="card-6" onmouseover="basculer('6', true)" onmouseout="basculer('6', false)">
+                    <div id="recto-6">
+                        <img src="./img/laboetie.png" class="card-img-top p-4" style="height: 160px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="fw-bold">La Boétie</h5>
+                            <p class="small text-muted mb-0">Inspiration</p>
+                        </div>
+                    </div>
+                    <div id="verso-6" class="card-body d-none bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
+                        <h5 class="text-info">La Boétie</h5>
+                        <p class="small p-2">Inspiration philosophique sur l'autonomie et la liberté.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 bg-white" id="card-7" onmouseover="basculer('7', true)" onmouseout="basculer('7', false)">
+                    <div id="recto-7">
+                        <img src="./img/ovh.png" class="card-img-top p-4" style="height: 160px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="fw-bold">OVHcloud</h5>
+                            <p class="small text-primary mb-0">Hébergement</p>
+                        </div>
+                    </div>
+                    <div id="verso-7" class="card-body d-none bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
+                        <h5 class="text-info">OVHcloud</h5>
+                        <p class="small p-2">Hébergeur chez qui j'ai loué mon premier serveur Rise 1 en 2020.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 bg-white" id="card-8" onmouseover="basculer('8', true)" onmouseout="basculer('8', false)">
+                    <div id="recto-8">
+                        <img src="./img/dell.png" class="card-img-top p-4" style="height: 160px; object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Dell</h5>
+                            <p class="small text-primary mb-0">Hardware</p>
+                        </div>
+                    </div>
+                    <div id="verso-8" class="card-body d-none bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
+                        <h5 class="text-info">Dell</h5>
+                        <p class="small p-2">Serveurs R410 constituant la base de mon infrastructure physique.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5 text-center">
+        <p class="small mb-0">Oscar Casalta - Saé 104 - 2025/2026</p>
+    </footer>
+
+    <script>
+        function basculer(id, survol) {
+            const recto = document.getElementById('recto-' + id);
+            const verso = document.getElementById('verso-' + id);
+            
+            if (survol) {
+                recto.classList.add('d-none');
+                verso.classList.remove('d-none');
+            } else {
+                recto.classList.remove('d-none');
+                verso.classList.add('d-none');
+            }
+        }
+    </script>
 </body>
 </html>

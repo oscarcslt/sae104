@@ -2,23 +2,142 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Ressources - SAÉ 104</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources - Oscar Casalta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="container py-5">
-    <h2>Tableau des Ressources</h2>
-    <table class="table table-striped mt-4">
-        <thead>
-            <tr><th>Page</th><th>Fichier</th><th>% Réalisation</th><th>Sources</th></tr>
-        </thead>
-        <tbody>
-            <tr><td>Accueil</td><td>accueil.html</td><td>100%</td><td>Travail personnel</td></tr>
-            <tr><td>CV</td><td>cv.html</td><td>100%</td><td>Données CV personnel </td></tr>
-            <tr><td>Blason</td><td>blason.html</td><td>100%</td><td>Modèle fourni </td></tr>
-            <tr><td>Timeline</td><td>timeline.html</td><td>100%</td><td>Données personnelles</td></tr>
-            <tr><td>Ressources</td><td>ressources.html</td><td>100%</td><td>Documentation SAÉ [cite: 1]</td></tr>
-        </tbody>
-    </table>
-    <script src="./script.js"></script>
+<body class="bg-light">
+
+    <header class="py-3 border-bottom bg-white shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="./img/logo.png" alt="Logo" width="40" class="me-2">
+                <span class="fs-4 fw-bold text-dark">Portfolio Oscar Casalta</span>
+            </div>
+            <span class="text-muted d-none d-md-block">Sources & Documentation technique</span>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-uppercase small">
+                    <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">Mon CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blason.html">Blason</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projet.html">Projet Pro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carousel.html">Carousel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cards.html">Cards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="timeline.html">Parcours</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="ressources.html">Ressources</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-uppercase">Ressources & Références</h1>
+            <p class="text-muted">Détails des technologies et correspondance des fichiers</p>
+        </div>
+
+        <section class="mb-5">
+            <h3 class="fw-bold border-bottom border-primary border-3 pb-2 mb-4">Organisation du site</h3>
+            <div class="table-responsive shadow-sm bg-white rounded">
+                <table class="table table-hover mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Page</th>
+                            <th>Fichier</th>
+                            <th>% réalisation</th>
+                            <th>Sources & références</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Accueil</td>
+                            <td>accueil.html</td>
+                            <td>100%</td>
+                            <td>Bootstrap 5, JS interne</td>
+                        </tr>
+                        <tr>
+                            <td>2. CV</td>
+                            <td>cv.html</td>
+                            <td>100%</td>
+                            <td>Données CV PDF & Portfolio HTM</td>
+                        </tr>
+                        <tr>
+                            <td>3. Blason</td>
+                            <td>blason.html</td>
+                            <td>100%</td>
+                            <td>Image blason.png, JS interactif</td>
+                        </tr>
+                        <tr>
+                            <td>4. Projet Pro</td>
+                            <td>projet.html</td>
+                            <td>100%</td>
+                            <td>PPP & Communication</td>
+                        </tr>
+                        <tr>
+                            <td>5. Carousel</td>
+                            <td>carousel.html</td>
+                            <td>100%</td>
+                            <td>Composant Bootstrap Carousel</td>
+                        </tr>
+                        <tr>
+                            <td>6. Cards</td>
+                            <td>cards.html</td>
+                            <td>100%</td>
+                            <td>JS hover effect, 8 entités</td>
+                        </tr>
+                        <tr>
+                            <td>7. Timeline</td>
+                            <td>timeline.html</td>
+                            <td>100%</td>
+                            <td>JS hover, Surcharge CSS autorisée</td>
+                        </tr>
+                        <tr>
+                            <td>8. Ressources</td>
+                            <td>ressources.html</td>
+                            <td>100%</td>
+                            <td>Cahier des charges Saé 104</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-header bg-primary text-white fw-bold">🛠️ Technologies utilisées</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>HTML5 :</strong> Structure sémantique des pages</li>
+                        <li class="list-group-item"><strong>Bootstrap 5.3 :</strong> Framework CSS pour le responsive design</li>
+                        <li class="list-group-item"><strong>JavaScript :</strong> Interactions utilisateur (survol, affichage dynamique)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-header bg-dark text-white fw-bold">📁 Outils et Documentation</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>FileZilla :</strong> Client FTP pour l'hébergement sur serveur IUT</li>
+                        <li class="list-group-item"><strong>W3C Validator :</strong> Vérification de la conformité du code</li>
+                        <li class="list-group-item"><strong>VS Code :</strong> Éditeur de code utilisé pour le développement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5 text-center">
+        <p class="small mb-0 text-uppercase">Oscar Casalta - R&T Saint-Malo - Saé 104 - 2025/2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
