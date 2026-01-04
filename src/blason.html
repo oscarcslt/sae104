@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blason - Oscar Casalta</title>
+    <title>Blason Interactif - Oscar Casalta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
@@ -11,7 +11,7 @@
     <header class="py-3 border-bottom bg-white shadow-sm text-center">
         <div class="container d-flex justify-content-center align-items-center">
             <img src="./img/logo.png" alt="Logo" width="40" class="me-2">
-            <span class="fs-4 fw-bold">Mon Blason Interactif</span>
+            <span class="fs-4 fw-bold">Portfolio Oscar Casalta</span>
         </div>
     </header>
 
@@ -23,7 +23,7 @@
                 <li class="nav-item"><a class="nav-link active fw-bold" href="blason.html">Blason</a></li>
                 <li class="nav-item"><a class="nav-link" href="projet.html">Projet Pro</a></li>
                 <li class="nav-item"><a class="nav-link" href="carousel.html">Photos</a></li>
-                <li class="nav-item"><a class="nav-link" href="cards.html">Relations</a></li>
+                <li class="nav-item"><a class="nav-link" href="cards.html">Cards</a></li>
                 <li class="nav-item"><a class="nav-link" href="timeline.html">Parcours</a></li>
                 <li class="nav-item"><a class="nav-link" href="ressources.html">Ressources</a></li>
             </ul>
@@ -31,78 +31,90 @@
     </nav>
 
     <main class="container py-5 text-center">
-        <div class="alert alert-primary fw-bold shadow-sm mb-4" id="bulle-info" style="min-height: 60px;">
-            Survolez un point pour voir la description
+        <h1 class="display-5 fw-bold mb-4 text-uppercase">Exploration de mon Blason</h1>
+
+        <div id="zone-info" class="alert alert-primary mb-4 shadow-sm fw-bold" style="min-height: 80px;">
+            Survolez un élément de la grille pour découvrir sa signification
         </div>
 
-        <div class="position-relative d-inline-block shadow rounded bg-white p-2 mb-5">
-            <img src="./img/blason.png" alt="Blason" class="img-fluid rounded" style="max-width: 500px;">
+        <div class="row row-cols-3 g-2 bg-white p-3 shadow rounded mx-auto" style="max-width: 800px;">
             
-            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
-                    style="top: 15%; left: 28%; width: 32px; height: 32px;"
-                    title="Points Forts"
-                    onmouseover="majDesc('Points Forts : Rigueur technique et résilience (Le Phénix)')"
-                    onmouseout="resetDesc()">1</button>
+            <div class="col">
+                <img src="./img/bla1.png" class="img-fluid border rounded p-2" alt="Phénix" 
+                     onmouseover="maj('Force', 'La résilience et la capacité à renaître symbolisées par le Phénix : Je persévere même quand je suis en échec')" onmouseout="reset()">
+            </div>
+            <div class="col">
+                <img src="./img/bla2.png" class="img-fluid border rounded p-2" alt="Château de sable"
+                     onmouseover="maj('Perfectionnisme', 'Je suis attentif au moindre détail même le moins imporant, ce qui peut me faire perdre du temps')" onmouseout="reset()">
+            </div>
+            <div class="col">
+                <img src="./img/bla3.png" class="img-fluid border rounded p-2" alt="Menottes"
+                     onmouseover="maj('Lacher prise', 'J\' ai du mal à lacher prise sur un projet ou une tâche.')" onmouseout="reset()">
+            </div>
 
-            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
-                    style="top: 15%; left: 70%; width: 32px; height: 32px;"
-                    title="Obstacles"
-                    onmouseover="majDesc('Obstacles : Limites matérielles et sécurité physique')"
-                    onmouseout="resetDesc()">2</button>
+            <div class="col">
+                <img src="./img/bla4.png" class="img-fluid border rounded p-2" alt="Entraide"
+                     onmouseover="maj('Entraide', 'L\'entraide et l\'esprit d\'équipe sont pour moi des valeurs qui me font avancer au quotidien. J\'aime apprendre des autres et partager.')" onmouseout="reset()">
+            </div>
+            <div class="col">
+                <img src="./img/bla5.png" class="img-fluid border rounded p-2" alt="La Boétie"
+                     onmouseover="maj('Référence', 'L\'autonomie et la liberté de pensée prônées par Étienne de La Boétie')" onmouseout="reset()">
+            </div>
+            <div class="col">
+                <img src="./img/bla6.png" class="img-fluid border rounded p-2" alt="La boétie"
+                     onmouseover="maj('Philosophie', 'J\'ai découvert La Boétie et le discours de la servitude volontaire qui m\'ont fait me remettre en question et réflechir')" onmouseout="reset()">
+            </div>
 
-            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
-                    style="top: 32%; left: 35%; width: 32px; height: 32px;"
-                    title="Valeurs"
-                    onmouseover="majDesc('Valeurs : Travail d\'équipe et entraide')"
-                    onmouseout="resetDesc()">3</button>
+            <div class="col">
+                <img src="./img/bla7.png" class="img-fluid border rounded p-2" alt="Feu d'artifice"
+                     onmouseover="maj('Explosivité', 'Lorsque j\'ai une tache ou un projet que j\'aime ou qui m\'intéresse je peut partir au quart de tour pour le/la commencer.')" onmouseout="reset()">
+            </div>
+            <div class="col">
+                <img src="./img/bla8.png" class="img-fluid border rounded p-2" alt="Recherche"
+                     onmouseover="maj('Comprendre', 'J\'aime comprendre comment fonctionne ce qui m\'entoure.')" onmouseout="reset()">
+            </div>
+            <div class="col">
+                <img src="./img/bla9.png" class="img-fluid border rounded p-2" alt="OLT"
+                     onmouseover="maj('R&T', 'Je souhaite devenir ingénieur R&T car c\'est un domaine passionnant et qui me passionne depuis un certain nombre d\'années.')" onmouseout="reset()">
+            </div>
 
-            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
-                    style="top: 32%; left: 70%; width: 32px; height: 32px;"
-                    title="Références"
-                    onmouseover="majDesc('Références : L\'autonomie prônée par Étienne de La Boétie')"
-                    onmouseout="resetDesc()">4</button>
-
-            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
-                    style="top: 50%; left: 45%; width: 32px; height: 32px;"
-                    title="Événements"
-                    onmouseover="majDesc('Événements : Création d\'OCASDEV et infrastructures serveurs')"
-                    onmouseout="resetDesc()">5</button>
-
-            <button class="btn btn-primary btn-sm rounded-circle position-absolute border border-2 border-white" 
-                    style="top: 50%; left: 72%; width: 32px; height: 32px;"
-                    title="Amélioration"
-                    onmouseover="majDesc('Amélioration : Gestion du stress et protocoles complexes')"
-                    onmouseout="resetDesc()">6</button>
+            <div class="col">
+                <img src="./img/bla10.png" class="img-fluid border rounded p-2" alt="Technologie"
+                     onmouseover="maj('Passion', 'L\'évolution constante des outils informatiques et réseaux')" onmouseout="reset()">
+            </div>
+            <div class="col">
+                <img src="./img/bla11.png" class="img-fluid border rounded p-2" alt="Minitel"
+                     onmouseover="maj('Héritage technologique', 'J\'aime les anciennes technologies comme le minitel car elle me permette de mieux comprendre les technologies d\'aujoud\'hui.')" onmouseout="reset()">
+            </div>
+            <div class="col">
+                <img src="./img/bla12.png" class="img-fluid border rounded p-2" alt="Covid19"
+                     onmouseover="maj('Confinement de 2020', 'Le confinement a pour moi été une période clé pour moi, elle m\'as permis de découvir ma passion pour l\'informatique.')" onmouseout="reset()">
+            </div>
         </div>
 
-        <div class="card shadow-sm border-0 p-4 mx-auto" style="max-width: 800px;">
+        <div class="card shadow-sm p-4 mx-auto mt-5" style="max-width: 600px;">
             <p class="mb-0 text-muted fst-italic">
                 "Soyez résolus à ne plus servir, et vous voilà libres."
             </p>
+            <p>Le discours de la servitude volontaire, Etienne de La Boétie</p>
         </div>
     </main>
 
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center small text-uppercase">
-            Oscar Casalta - R&T Saint-Malo - Saé 104
-        </div>
+    <footer class="bg-dark text-white py-4 mt-5 text-center">
+        <p class="small mb-0">Oscar Casalta - R&T Saint-Malo - Saé 104</p>
     </footer>
 
     <script>
-        function majDesc(texte) {
-            var bulle = document.getElementById('bulle-info');
-            if (bulle) {
-                bulle.innerText = texte;
-                bulle.classList.replace('alert-primary', 'alert-dark');
-            }
+        function maj(titre, texte) {
+            const bulle = document.getElementById('zone-info');
+            bulle.innerHTML = `<span class="text-dark fs-5">${titre} :</span> <br> ${texte}`;
+            bulle.classList.replace('alert-primary', 'alert-dark');
         }
 
-        function resetDesc() {
-            var bulle = document.getElementById('bulle-info');
-            if (bulle) {
-                bulle.innerText = "Survolez un point pour voir la description";
-                bulle.classList.replace('alert-dark', 'alert-primary');
-            }
+        function reset() {
+            const bulle = document.getElementById('zone-info');
+            bulle.innerText = "Survolez un élément de la grille pour découvrir sa signification";
+            bulle.classList.replace('alert-dark', 'alert-primary');
         }
     </script>
 

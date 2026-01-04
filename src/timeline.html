@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcours Vertical - Oscar Casalta</title>
+    <title>Timeline Professionnelle - Oscar Casalta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Surcharges autorisées pour la timeline (Art. 2 du CDC) */
         .v-line { width: 4px; background-color: #2c3e50; position: absolute; left: 50%; transform: translateX(-50%); top: 0; bottom: 0; z-index: 1; }
-        .v-dot { width: 20px; height: 20px; background-color: #2c3e50; border: 3px solid white; border-radius: 50%; position: relative; z-index: 2; transition: 0.3s; cursor: pointer; }
+        .v-dot { width: 22px; height: 22px; background-color: #2c3e50; border: 3px solid white; border-radius: 50%; position: relative; z-index: 2; transition: 0.3s; cursor: pointer; }
         .v-dot:hover { transform: scale(1.4); background-color: #0d6efd; }
-        .v-card { width: 40%; opacity: 0; transition: 0.5s; pointer-events: none; }
-        .v-card.permanent { opacity: 1 !important; pointer-events: auto; }
-        .v-card.visible { opacity: 1; pointer-events: auto; }
-        .left-card { text-align: right; margin-right: 50px; }
-        .right-card { text-align: left; margin-left: 50px; }
+        
+        .v-card { width: 42%; opacity: 0; transition: 0.5s; pointer-events: none; transform: translateY(10px); }
+        .v-card.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        
+        .left-card { text-align: right; margin-right: 45px; }
+        .right-card { text-align: left; margin-left: 45px; }
+
+        @media (max-width: 768px) {
+            .v-line { left: 20px; }
+            .v-dot { left: -8px; }
+            .v-card { width: 85% !important; text-align: left !important; margin-left: 40px !important; margin-right: 0 !important; }
+        }
     </style>
 </head>
 <body class="bg-light">
@@ -22,7 +29,7 @@
     <header class="py-3 border-bottom bg-white shadow-sm text-center">
         <div class="container d-flex justify-content-center align-items-center">
             <img src="./img/logo.png" alt="Logo" width="40" class="me-2">
-            <span class="fs-4 fw-bold">Timeline Professionnelle - Oscar Casalta</span>
+            <span class="fs-4 fw-bold">Parcours Numérique - Oscar Casalta</span>
         </div>
     </header>
 
@@ -31,7 +38,11 @@
             <ul class="navbar-nav text-uppercase small">
                 <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="cv.html">Mon CV</a></li>
-                <li class="nav-item"><a class="nav-link active" href="timeline.html">Timeline</a></li>
+                <li class="nav-item"><a class="nav-link" href="blason.html">Blason</a></li>
+                <li class="nav-item"><a class="nav-link" href="projet.html">Projet Pro</a></li>
+                <li class="nav-item"><a class="nav-link" href="carousel.html">Photos</a></li>
+                <li class="nav-item"><a class="nav-link" href="cards.html">Relations</a></li>
+                <li class="nav-item"><a class="nav-link active fw-bold" href="timeline.html">Timeline</a></li>
                 <li class="nav-item"><a class="nav-link" href="ressources.html">Ressources</a></li>
             </ul>
         </div>
@@ -42,115 +53,119 @@
             <div class="v-line"></div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
-                <div class="v-card permanent left-card shadow-sm p-3 bg-white rounded border-start border-primary border-4">
+                <div id="e1" class="v-card left-card shadow-sm p-3 bg-white rounded border-start border-primary border-4">
                     <h6 class="fw-bold mb-0">Décembre 2007</h6>
-                    <p class="mb-0 small">Naissance</p>
+                    <p class="mb-0 small text-muted">Naissance</p>
                 </div>
-                <div class="v-dot shadow"></div>
-                <div style="width: 40%;"></div> </div>
+                <div class="v-dot shadow" onmouseover="showEvent('e1')" onmouseout="hideEvent('e1')"></div>
+                <div style="width: 42%;"></div>
+            </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
-                <div style="width: 40%;"></div> <div class="v-dot shadow" onmouseover="showEvent('e2')" onmouseout="hideEvent('e2')"></div>
+                <div style="width: 42%;"></div>
+                <div class="v-dot shadow" onmouseover="showEvent('e2')" onmouseout="hideEvent('e2')"></div>
                 <div id="e2" class="v-card right-card shadow-sm p-3 bg-white rounded">
-                    <h6 class="fw-bold mb-0 text-muted">Janvier 2019</h6>
-                    <p class="mb-0 small">Premier site web</p>
+                    <h6 class="fw-bold mb-0">Janvier 2019</h6>
+                    <p class="mb-0 small">Développement de mon premier site web en HTML/CSS avec Dreamweaver</p>
                 </div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
                 <div id="e3" class="v-card left-card shadow-sm p-3 bg-white rounded">
-                    <h6 class="fw-bold mb-0 text-muted">Juillet 2020</h6>
-                    <p class="mb-0 small text-dark">Premier serveur</p>
+                    <h6 class="fw-bold mb-0">Juillet 2020</h6>
+                    <p class="mb-0 small">Mon premier serveur Web Linux - Dell R210 II</p>
                 </div>
                 <div class="v-dot shadow" onmouseover="showEvent('e3')" onmouseout="hideEvent('e3')"></div>
-                <div style="width: 40%;"></div>
+                <div style="width: 42%;"></div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
-                <div style="width: 40%;"></div>
+                <div style="width: 42%;"></div>
                 <div class="v-dot shadow" onmouseover="showEvent('e4')" onmouseout="hideEvent('e4')"></div>
                 <div id="e4" class="v-card right-card shadow-sm p-3 bg-white rounded">
-                    <h6 class="fw-bold mb-0 text-muted">Décembre 2020</h6>
-                    <p class="mb-0 small">Premier hyperviseur (Rise 1 OVH ESXI 6.7)</p>
+                    <h6 class="fw-bold mb-0">Décembre 2020</h6>
+                    <p class="mb-0 small">Premier Hyperviseur ESXi - OVH Rise1</p>
                 </div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
                 <div id="e5" class="v-card left-card shadow-sm p-3 bg-white rounded border-end border-primary border-4">
                     <h6 class="fw-bold mb-0 text-primary">Février 2021</h6>
-                    <p class="mb-0 small">Création d'OCASDEV</p>
+                    <p class="mb-0 small">Fondation d'<strong>OCASDEV</strong></p>
                 </div>
                 <div class="v-dot shadow" onmouseover="showEvent('e5')" onmouseout="hideEvent('e5')"></div>
-                <div style="width: 40%;"></div>
+                <div style="width: 42%;"></div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
-                <div style="width: 40%;"></div>
+                <div style="width: 42%;"></div>
                 <div class="v-dot shadow" onmouseover="showEvent('e6')" onmouseout="hideEvent('e6')"></div>
                 <div id="e6" class="v-card right-card shadow-sm p-3 bg-white rounded">
-                    <h6 class="fw-bold mb-0 text-muted">Novembre 2022</h6>
-                    <p class="mb-0 small">Premier hyperviseur "physique" : Dell R410</p>
+                    <h6 class="fw-bold mb-0">Novembre 2022</h6>
+                    <p class="mb-0 small">Premier hyperviseur physique - Dell R410 avec ESXi 6.5</p>
                 </div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
-                <div id="e7" class="v-card left-card shadow-sm p-3 bg-white rounded">
-                    <h6 class="fw-bold mb-0 text-muted">Février 2023</h6>
-                    <p class="mb-0 small">Premier FortiGate</p>
+                <div id="e7" class="v-card left-card shadow-sm p-3 bg-white rounded border-end border-info border-4">
+                    <h6 class="fw-bold mb-0">Février 2023</h6>
+                    <p class="mb-0 small text-dark">Premier FortiGate 60D suite à un ransomware sur mon serveur.</p>
                 </div>
                 <div class="v-dot shadow" onmouseover="showEvent('e7')" onmouseout="hideEvent('e7')"></div>
-                <div style="width: 40%;"></div>
+                <div style="width: 42%;"></div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
-                <div style="width: 40%;"></div>
+                <div style="width: 42%;"></div>
                 <div class="v-dot shadow" onmouseover="showEvent('e8')" onmouseout="hideEvent('e8')"></div>
                 <div id="e8" class="v-card right-card shadow-sm p-3 bg-white rounded">
-                    <h6 class="fw-bold mb-0 text-muted">Juin 2023</h6>
-                    <p class="mb-0 small">Première baie de serveur</p>
+                    <h6 class="fw-bold mb-0">Juin 2023</h6>
+                    <p class="mb-0 small">Installation de la première baie complète avec de nouveaux serveur et un nouveau firewall</p>
                 </div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
                 <div id="e9" class="v-card left-card shadow-sm p-3 bg-white rounded">
-                    <h6 class="fw-bold mb-0 text-muted">Janvier 2024</h6>
-                    <p class="mb-0 small">Premier réseau 10GB</p>
+                    <h6 class="fw-bold mb-0">Janvier 2024</h6>
+                    <p class="mb-0 small">Nouveau réseau 10GB entre mes hyperviseurs et passage définitf à Proxmox</p>
                 </div>
                 <div class="v-dot shadow" onmouseover="showEvent('e9')" onmouseout="hideEvent('e9')"></div>
-                <div style="width: 40%;"></div>
+                <div style="width: 42%;"></div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
-                <div style="width: 40%;"></div>
+                <div style="width: 42%;"></div>
                 <div class="v-dot shadow" onmouseover="showEvent('e10')" onmouseout="hideEvent('e10')"></div>
                 <div id="e10" class="v-card right-card shadow-sm p-3 bg-white rounded border-start border-success border-4">
                     <h6 class="fw-bold mb-0 text-success">Janvier 2025</h6>
-                    <p class="mb-0 small">Premières certifications Fortinet</p>
+                    <p class="mb-0 small">Obtention des certifications Fortinet NSE 1, 2 et 3</p>
                 </div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center mb-5 position-relative">
-                <div class="v-card permanent left-card shadow-sm p-3 bg-white rounded border-end border-danger border-4">
+                <div id="e11" class="v-card left-card shadow-sm p-3 bg-white rounded border-end border-danger border-4">
                     <h6 class="fw-bold mb-0 text-danger">Septembre 2025</h6>
-                    <p class="mb-0 small">Entrée à l'IUT Saint-Malo</p>
+                    <p class="mb-0 small">Entrée en BUT R&T à l'IUT de Saint-Malo</p>
                 </div>
-                <div class="v-dot shadow bg-danger"></div>
-                <div style="width: 40%;"></div>
+                <div class="v-dot shadow bg-danger" onmouseover="showEvent('e11')" onmouseout="hideEvent('e11')"></div>
+                <div style="width: 42%;"></div>
             </div>
 
         </div>
     </main>
 
-    <footer class="bg-dark text-white py-3 text-center">
-        <p class="small mb-0 text-uppercase">Oscar Casalta - Saé 104 - 2025/2026</p>
+    <footer class="bg-dark text-white py-4 mt-5 text-center">
+        <p class="small mb-0 text-uppercase">Oscar Casalta - R&T Saint-Malo - Saé 104</p>
     </footer>
 
     <script>
         function showEvent(id) {
-            document.getElementById(id).classList.add('visible');
+            const el = document.getElementById(id);
+            if(el) el.classList.add('visible');
         }
         function hideEvent(id) {
-            document.getElementById(id).classList.remove('visible');
+            const el = document.getElementById(id);
+            if(el) el.classList.remove('visible');
         }
     </script>
 </body>
